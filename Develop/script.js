@@ -45,13 +45,32 @@ function userOptions() {
 function generatePassword() {
   var options = userOptions();
   console.log(options);
+  var randomChar = [];
+
+  for (i = 0; i < options.confirmLength; i++) {
+    if (options.confirmU === true) {
+      randomChar.push(getRandomUper());
+    }
+
+    if (options.confirmS === true) {
+      randomChar.push(getRandomSpec());
+    }
+
+    if (options.confirmL === true) {
+      randomChar.push(getRandomLower());
+    }
+
+    if (options.confirmNum === true) {
+      randomChar.push(getRandomNum());
+    }
+  }
+  return randomChar;
 }
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
