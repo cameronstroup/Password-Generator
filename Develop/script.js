@@ -47,7 +47,7 @@ function generatePassword() {
   console.log(options);
   var randomChar = [];
 
-  for (i = 0; i < options.confirmLength; i++) {
+  for (i = 0; i < options.confirmLength / 4; i++) {
     if (options.confirmU === true) {
       randomChar.push(getRandomUper());
     }
@@ -64,7 +64,7 @@ function generatePassword() {
       randomChar.push(getRandomNum());
     }
   }
-  return randomChar;
+  return randomChar.join("");
 }
 
 function writePassword() {
