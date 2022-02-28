@@ -6,3 +6,5 @@ This website allows the user to click the generate button on the bottom of the p
 * **CSS3**
 * **JavaScript**
 ## Picture 
+![image](https://user-images.githubusercontent.com/90347622/155922075-da53ebab-eae2-492e-9f1a-817f728a5f95.png)
+
