@@ -14,8 +14,6 @@ function getRandomSpec() {
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
-console.log(getRandomLower(), getRandomUper(), getRandomNum(), getRandomSpec());
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -49,7 +47,7 @@ function userOptions() {
   if (confirmNum === true) {
     count++;
   }
-
+  // created this object for the if statements on the next function
   var confirmations = {
     confirmLength: confirmLength,
     confirmU: confirmU,
@@ -59,13 +57,12 @@ function userOptions() {
     count: count,
   };
 
-  console.log(confirmations);
-
   return confirmations;
 }
+// creates an array 'randomchar' of the desired characters
 function generatePassword() {
   var options = userOptions();
-  console.log(options);
+
   var randomChar = [];
 
   for (i = 0; i < options.confirmLength / options.count; i++) {
@@ -85,6 +82,7 @@ function generatePassword() {
       randomChar.push(getRandomNum());
     }
   }
+  // turns array into string
   return randomChar.join("");
 }
 
