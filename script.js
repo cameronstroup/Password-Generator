@@ -74,6 +74,7 @@ function generatePassword() {
     if (options.confirmS === true) {
       randomChar.push(getRandomSpec());
     }
+    f;
 
     if (options.confirmL === true) {
       randomChar.push(getRandomLower());
